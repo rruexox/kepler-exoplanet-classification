@@ -44,14 +44,3 @@ that scientists themselves have not yet confirmed or denied. When excluding
 CANDIDATE and running a binary classification between FALSE POSITIVE and 
 CONFIRMED, the model achieves 98% accuracy, demonstrating that the pipeline 
 is highly effective for the cases where a definitive label exists.
-
-## Requirements
-```
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-xgboost
-imbalanced-learn
-```
