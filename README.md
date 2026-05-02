@@ -125,7 +125,6 @@ SHAP analysis identifies the features driving model predictions. The results are
     xgb_multiclass.pkl
 /notebooks
     kepler_koi_classification.ipynb
-/outputs
 README.md
 requirements.txt
 ```
