@@ -91,13 +91,14 @@ Rather than classifying candidates (which would be scientifically dishonest — 
 
 ## Astrophysical Interpretation
 
-SHAP analysis reveals which features drive predictions, and the results align with known astrophysics:
+SHAP analysis shows which features matter most to the model, and the results make physical sense:
 
-- **`koi_score` / `score_sq`** — Kepler's own planet likelihood score is the dominant signal. The model learning to trust this validates the approach — it is essentially agreeing with the instrument's built-in confidence metric.
-- **`koi_multiplicity`** — stars with multiple KOIs are far more likely to host real planets. The probability that multiple independent false positive signals occur around the same star by chance is extremely low.
-- **`radius_ratio` (koi_prad / koi_srad)** — real planets occupy a physically constrained size range. Objects with extreme radius ratios are more likely eclipsing binaries masquerading as transits.
-- **`koi_teq` (equilibrium temperature)** — extreme temperatures correlate with false positives driven by stellar activity rather than a planetary companion.
-- **`koi_period`** — very short orbital periods are disproportionately associated with false positives, as grazing eclipsing binaries tend to cluster at short periods.
+- **`score_sq`** — the single most important feature, engineered by squaring `koi_score`. Squaring amplifies the gap between high and low confidence objects, making it easier for the model to separate confirmed planets from false positives.
+- **`koi_score`** — Kepler's own confidence score, the second strongest signal. The model is essentially agreeing with the telescope's own judgment.
+- **`koi_prad`** — planetary radius. Real planets fall within a predictable size range, so unusually large or small values are a red flag.
+- **`radius_ratio`** — engineered feature (koi_prad / koi_srad). Comparing the planet's size to its host star's size is more informative than either alone — objects with extreme ratios are more likely eclipsing binary stars mimicking a planet.
+- **`koi_multiplicity`** — engineered feature counting how many candidates share the same host star. Stars with multiple candidates are far more likely to host real planets — it's statistically very unlikely for multiple false signals to occur around the same star by coincidence.
+- **`koi_period`** — very short orbital periods are more commonly associated with false positives than real planets.
 
 ---
 
