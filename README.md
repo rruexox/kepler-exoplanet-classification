@@ -116,17 +116,16 @@ SHAP analysis identifies the features driving model predictions. The results are
 ## Files
 
 ```
-/kaggle
-    exoplanets_data.csv
-/models
-    preprocessing_pipeline.pkl
-    stacking_ensemble.pkl
-    xgb_binary.pkl
-    xgb_multiclass.pkl
-/notebooks
-    kepler_koi_classification.ipynb
-README.md
-requirements.txt
+/kaggle  
+    exoplanets_data.csv  
+/models  
+    preprocessing_pipeline.pkl  
+    stacking_ensemble.pkl  
+    xgb_binary.pkl  
+    xgb_multiclass.pkl  
+README.md  
+kepler_koi_classification.ipynb  
+requirements.txt  
 ```
 
 ---
