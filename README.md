@@ -1,5 +1,9 @@
 # Kepler Exoplanet Classification — KOI Features
 
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-4F46E5)
+
 A machine learning pipeline to classify exoplanet candidates from NASA's Kepler Space Telescope into three categories: FALSE POSITIVE, CANDIDATE, and CONFIRMED, and rank unresolved candidates by their likelihood of being real planets.
 
 ---
@@ -116,16 +120,16 @@ SHAP analysis identifies the features driving model predictions. The results are
 ## Files
 
 ```
-/kaggle  
-    exoplanets_data.csv  
-/models  
-    preprocessing_pipeline.pkl  
-    stacking_ensemble.pkl  
-    xgb_binary.pkl  
-    xgb_multiclass.pkl  
-README.md  
-kepler_koi_classification.ipynb  
-requirements.txt  
+├── kaggle/
+│   └── exoplanets_data.csv
+├── models/
+│   ├── preprocessing_pipeline.pkl
+│   ├── stacking_ensemble.pkl
+│   ├── xgb_binary.pkl
+│   └── xgb_multiclass.pkl
+├── README.md
+├── kepler_koi_classification.ipynb
+└── requirements.txt
 ```
 
 ---
